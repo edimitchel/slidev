@@ -76,7 +76,7 @@ export async function promptForThemeInstallation(name: string) {
     return false
 
   if (isInstalledGlobally)
-    await run(parseNi, ['-g', name])
+    await run(parseNi, ['-g', name], { autoInstall: false })
   else
     await run(parseNi, [name])
 
